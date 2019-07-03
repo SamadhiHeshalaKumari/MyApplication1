@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/root">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                   
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="TODO"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pizza Price"
+                    android:layout_alignBottom="@+id/image"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:background="#ECE6E6"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="7dp">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:textSize="20dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Pizza name"
+                        android:textColor="#03A9F4"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="300dp"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:text="Pizza Description"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/noscroll"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/top"
+            android:background="#03219B">
+
+            <TextView
+                android:id="@+id/allprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#03219B"
+                android:layout_weight="1"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Rs.4200"
+                android:layout_marginLeft="15dp"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/addToCart"
+                android:clickable="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:text="Buy"
+                android:textColor="#ffff"
+                android:background="#4257E6"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
